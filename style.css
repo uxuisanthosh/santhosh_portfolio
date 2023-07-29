@@ -824,6 +824,17 @@ footer span a:hover {
 }
 
 
+#Success_Msg{
+    padding-top: 20px;
+    color: green;
+    font-weight: 500;
+}
+#Unsent_Msg{
+    padding-top: 20px;
+    color: red;
+    font-weight: 500;
+}
+
 /* responsive media query start */
 @media (max-width: 1104px) {
     .about .about-content .left img {

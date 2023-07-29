@@ -266,25 +266,27 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="#">
+                    <form name="submit-to-google-sheet">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" placeholder="Name" required name="Name">
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" placeholder="Email" required name="Email">
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" placeholder="Subject" required name="Subject">
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                            <textarea cols="30" rows="10" placeholder="Message.." required name="Message"></textarea>
                         </div>
                         <div class="button-area">
                             <button type="submit">Send message</button>
                         </div>
                     </form>
+                    <div id="Success_Msg"></div>
+                    <div id="UnsentSuccess_Msg"></div>
                 </div>
             </div>
         </div>

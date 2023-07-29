@@ -64,3 +64,28 @@ function openTab(tabName) {
     event.currentTarget.classList.add('active-link');
     document.getElementById(tabName).classList.add('active-tab');
 }
+
+
+ // Form script
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzM_Oh3lJjRPNFAaIKG2q8DXeG1HjbNXY9R9atnOGOxW01QgEzB_DK48crbTSYQkgDz/exec'
+  const form = document.forms['submit-to-google-sheet'];
+  const sentmsg = document.getElementById("Success_Msg");
+  const unsentmsg = document.getElementById("Unsent_Msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {sentmsg.innerHTML = "Message Sent Successfully"
+    setTimeout(function(){
+        sentmsg.innerHTML =""
+    },5000)
+    form.reset()
+})
+      .catch(error => {unsentmsg.innerHTML = "Message Sent Unsuccesfull"
+      setTimeout(function(){
+        unsentmsg.innerHTML =""
+      },5000)
+      form.reset()
+  })
+  })
