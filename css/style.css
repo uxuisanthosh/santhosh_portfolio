@@ -200,36 +200,49 @@ section .title::after {
     font-family: 'DynaPuff', cursive;
 }
 
-.home .max-width {
+.homebg {
+    display: flex;
+    background: url("../images/bannermobile.jpg") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'DynaPuff', cursive;
+}
+
+.home .max-width,
+.homebg .max-width {
     width: 100%;
     display: flex;
 }
 
-.home .max-width .row {
+.home .max-width .row,
+.homebg .max-width .row {
     margin-right: 0;
 }
 
-.home .home-content .text-1 {
+.home .home-content .text-1 .homebg .homebg-content .text-1 {
     font-size: 27px;
 }
 
-.home .home-content .text-2 {
+.home .home-content .text-2, .homebg .homebg-content .text-2{
     font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
 }
 
-.home .home-content .text-3 {
+.home .home-content .text-3 , .homebg .homebg-content .text-3 {
     font-size: 40px;
     margin: 5px 0;
 }
 
-.home .home-content .text-3 span {
+.home .home-content .text-3 span , .homebg .homebg-content .text-3 span{
     color: #985744;
     font-weight: 500;
 }
 
-.home .home-content a {
+.home .home-content a,  .homebg .homebg-content a {
     display: inline-block;
     background: #985744;
     color: #fff;
@@ -242,7 +255,7 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
-.home .home-content a:hover {
+.home .home-content a:hover ,  .homebg .homebg-content a:hover {
     color: #985744;
     background: none;
 }
@@ -255,7 +268,7 @@ section .title::after {
 .about .about-content .left {
     width: 35%;
     position: relative;
-        cursor: pointer;
+    cursor: pointer;
 }
 
 .about .about-content .left img {
@@ -430,10 +443,11 @@ section .title::after {
 
     }
 }
+
 /* about section styling */
 
 /* services section styling */
-.services{
+.services {
     color: #fff;
     background: #111;
 }
@@ -484,8 +498,9 @@ section .title::after {
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
+
 .services .serv-content p {
-  line-height: 1.7;
+    line-height: 1.7;
 }
 
 /* skills section styling */
@@ -582,7 +597,7 @@ section .title::after {
 
 
 
-.projects{
+.projects {
     color: #fff;
     background: #111;
 }
@@ -824,12 +839,13 @@ footer span a:hover {
 }
 
 
-#Success_Msg{
+#Success_Msg {
     padding-top: 20px;
     color: green;
     font-weight: 500;
 }
-#Unsent_Msg{
+
+#Unsent_Msg {
     padding-top: 20px;
     color: red;
     font-weight: 500;
@@ -885,15 +901,15 @@ footer span a:hover {
         font-size: 25px;
     }
 
-    .home .home-content .text-2 {
+    .home .home-content .text-2 ,  .homebg .homebg-content .text-2 {
         font-size: 70px;
     }
 
-    .home .home-content .text-3 {
+    .home .home-content .text-3 ,  .homebg .homebg-content .text-2 {
         font-size: 35px;
     }
 
-    .home .home-content a {
+    .home .home-content a ,  .homebg .homebg-content a{
         font-size: 23px;
         padding: 10px 30px;
     }
@@ -929,19 +945,43 @@ footer span a:hover {
 }
 
 @media (max-width: 690px) {
+    .menudesktop{
+        display: none !important;
+    }
+    .menumobile{
+        display: block !important;
+    }
+    .hometwo {
+        display: none !important;
+    }
+
+    .homebgone {
+        display: block !important;
+    }
+    .homebg .homebg-content{
+        position: absolute !important;
+    bottom: 18px !important;
+    }
+
     .max-width {
         padding: 0 23px;
     }
-
-    .home .home-content .text-2 {
+    .home .home-content .text-1 ,  .homebg .homebg-content .text-1 {
+        font-size: 18px;
+        text-shadow: 1px 1px 2px #985744;
+    }
+    .home .home-content .text-2 ,  .homebg .homebg-content .text-2 {
         font-size: 60px;
+        text-shadow: 1px 1px 2px #985744;
     }
 
-    .home .home-content .text-3 {
+    .home .home-content .text-3,  .homebg .homebg-content .text-3 {
         font-size: 32px;
+        text-shadow: 1px 1px 2px #985744;
+
     }
 
-    .home .home-content a {
+    .home .home-content a , .homebg .homebg-content a{
         font-size: 20px;
     }
 
@@ -949,13 +989,30 @@ footer span a:hover {
         width: 100%;
     }
 }
+@media (min-width: 691px){
 
-@media (max-width: 500px) {
-    .home .home-content .text-2 {
-        font-size: 50px;
+    .menudesktop{
+        display: block !important;
+    }
+    .menumobile{
+        display: none !important;
     }
 
-    .home .home-content .text-3 {
+    .hometwo {
+        display: block !important;
+    }
+
+    .homebgone {
+        display: none !important;
+    }
+
+}
+@media (max-width: 500px) {
+    .home .home-content .text-2 ,  .homebg .homebg-content .text-2{
+        font-size: 36px;
+    }
+
+    .home .home-content .text-3 ,  .homebg .homebg-content  .text-3{
         font-size: 27px;
     }
 
